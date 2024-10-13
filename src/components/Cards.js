@@ -1,74 +1,42 @@
 import React from "react";
-
-const Cards = () => {
+import { FaRegHeart, FaGasPump } from "react-icons/fa";
+import { SiTransmission } from "react-icons/si";
+const Cards = (props) => {
   return (
-    <div className="relative flex overflow-x-scroll space-x-4 no-scrollbar">
-      {/* Car Card 1 */}
-      <div className="min-w-[280px] max-w-[300px] bg-white rounded-lg p-4 shadow-lg flex-shrink-0">
-        <div className="flex justify-between">
-          <h2 className="font-bold text-lg">Koenigsegg</h2>
-          <div className="text-red-500">❤️</div>
+    <div className="w-[240px] h-[286px] bg-white p-4 flex flex-col flex-shrink-0 justify-between rounded-[10px]">
+      <div>
+        <div className="flex items-center justify-between">
+          <p className="text-[16px] font-semibold">{props.name}</p>
+          <FaRegHeart size={24} />
         </div>
-        <p className="text-gray-500">Sport</p>
-        <img
-          className="w-full h-40 object-cover mt-4"
-          src="car-image-url.jpg"
-          alt="Koenigsegg"
-        />
-        <div className="flex justify-between text-gray-600 mt-4">
-          <span>90L</span>
-          <span>Manual</span>
-          <span>2 People</span>
-        </div>
-        <div className="mt-4">
-          <p className="font-bold text-xl">$99.00 / day</p>
-          <button className="mt-2 w-full bg-blue-500 text-white py-2 rounded-md">
-            Rental Now
-          </button>
+        <div className="mt-1">
+          <p className="text-[#90A3BF] text-[12px] font-medium">Sports</p>
         </div>
       </div>
-      <div className="min-w-[280px] max-w-[300px] bg-white rounded-lg p-4 shadow-lg flex-shrink-0">
-        <div className="flex justify-between">
-          <h2 className="font-bold text-lg">Koenigsegg</h2>
-          <div className="text-red-500">❤️</div>
+      <div>
+        <img src={props.image} alt="Car" />
+      </div>
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-1">
+          <FaGasPump size={14} color="#90A3BF" />
+          <p className="text-[12px] text-[#90A3BF]">{props.gasCapacity}</p>
         </div>
-        <p className="text-gray-500">Sport</p>
-        <img
-          className="w-full h-40 object-cover mt-4"
-          src="car-image-url.jpg"
-          alt="Koenigsegg"
-        />
-        <div className="flex justify-between text-gray-600 mt-4">
-          <span>90L</span>
-          <span>Manual</span>
-          <span>2 People</span>
+        <div className="flex items-center gap-1">
+          <SiTransmission size={14} color="#90A3BF" />
+          <p className="text-[12px] text-[#90A3BF]">{props.transmission}</p>
         </div>
-        <div className="mt-4">
-          <p className="font-bold text-xl">$99.00 / day</p>
-          <button className="mt-2 w-full bg-blue-500 text-white py-2 rounded-md">
-            Rental Now
-          </button>
+        <div className="flex items-center gap-1">
+          <FaGasPump size={14} color="#90A3BF" />
+          <p className="text-[12px] text-[#90A3BF]">{props.peopleCapacity}</p>
         </div>
       </div>
-      <div className="min-w-[280px] max-w-[300px] bg-white rounded-lg p-4 shadow-lg flex-shrink-0">
-        <div className="flex justify-between">
-          <h2 className="font-bold text-lg">Koenigsegg</h2>
-          <div className="text-red-500">❤️</div>
+      <div className="flex items-center gap-1 justify-between">
+        <div className="flex items-center justify-center">
+          <p className="text-[16px] font-bold">{props.rentalPerday}/</p>
+          <p className="text-[12px]"> day</p>
         </div>
-        <p className="text-gray-500">Sport</p>
-        <img
-          className="w-full h-40 object-cover mt-4"
-          src="car-image-url.jpg"
-          alt="Koenigsegg"
-        />
-        <div className="flex justify-between text-gray-600 mt-4">
-          <span>90L</span>
-          <span>Manual</span>
-          <span>2 People</span>
-        </div>
-        <div className="mt-4">
-          <p className="font-bold text-xl">$99.00 / day</p>
-          <button className="mt-2 w-full bg-blue-500 text-white py-2 rounded-md">
+        <div>
+          <button className="bg-primaryColor px-5 h-[36px] rounded-[10px] text-white text-[12px] font-semibold">
             Rental Now
           </button>
         </div>

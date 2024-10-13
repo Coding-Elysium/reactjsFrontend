@@ -4,7 +4,26 @@ import { BsFilter } from "react-icons/bs";
 import BG from "../assets/images/BG.png";
 import Car from "../assets/images/Car.png";
 import Cards from "../components/Cards.js";
+import Data from "../constant/Data.js";
 const Hero = () => {
+  const carPopular = Data.filter((datus) => {
+    return datus.status === "Popular";
+  });
+  const showPopular = carPopular.map((popular, index) => {
+    return (
+      <div key={index}>
+        <Cards
+          name={popular.name}
+          image={popular.image}
+          gasCapacity={popular.gasCapacity}
+          transmission={popular.transmission}
+          peopleCapacity={popular.peopleCapacity}
+          rentalPerday={popular.rentalPerDay}
+        />
+      </div>
+    );
+  });
+  console.log(showPopular);
   return (
     <div className="px-6">
       <div className="flex items-center justify-between">
@@ -48,7 +67,17 @@ const Hero = () => {
           </p>
           <p className="text-primaryColor text-[14px]">View All</p>
         </div>
-        <Cards />
+        <div className="relative flex overflow-x-scroll gap-5 no-scrollbar">
+          {showPopular}
+        </div>
+      </div>
+      <div>
+        <div className="mt-8 mb-5">
+          <p className="text-[#90A3BF] font-semibold text-[14px]">
+            Recommendation
+          </p>
+          <div></div>
+        </div>
       </div>
     </div>
   );
