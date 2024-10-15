@@ -44,9 +44,9 @@ const Hero = () => {
   });
   console.log(showPopular);
   return (
-    <div className="px-6">
+    <div className="px-6 lg:px-[62px]">
       <div className="flex items-center justify-between">
-        <div className="bg-green-50 relative">
+        <div className="bg-green-50 relative  lg:hidden">
           <input
             className="pl-[40px] h-[48px] border border-gray-300  rounded-[10px] w-auto md:pr-4"
             type="text"
@@ -54,30 +54,68 @@ const Hero = () => {
           />
           <CiSearch
             size={24}
-            className="absolute top-1/2 left-3 transform -translate-y-1/2"
+            className="absolute top-1/2 left-3 transform -translate-y-1/2 lg:hidden"
           ></CiSearch>
         </div>
-        <div className="border border-gray-300 w-[48px] h-[48px] flex items-center justify-center rounded-[10px]">
+        <div className="border border-gray-300 w-[48px] h-[48px] flex items-center justify-center rounded-[10px] lg:hidden">
           <BsFilter size={24} />
         </div>
       </div>
-      <div className="relative w-full h-auto p-4 bg-colorInformation rounded-[10px] mt-8">
-        <div className="w-[243px]">
-          <p className="text-[16px] font-semibold text-white">
-            The Best Platform for Car Rental
-          </p>
-          <p className="text-[12px] text-white mt-[12px]">
-            Ease of doing a car rental safely and reliably. Of course at a low
-            price.
-          </p>
-          <button className="bg-primaryColor h-[44px] w-[128px] rounded-[10px] text-white mt-[12px]">
-            Rental Car
-          </button>
+      <div className="flex gap-[30px]">
+        <div className="relative w-full h-auto p-4 bg-colorInformation rounded-[10px] mt-8">
+          <div className="w-[243px]">
+            <p className="text-[16px] font-semibold text-white">
+              The Best Platform for Car Rental
+            </p>
+            <p className="text-[12px] text-white mt-[12px]">
+              Ease of doing a car rental safely and reliably. Of course at a low
+              price.
+            </p>
+            <button className="bg-primaryColor h-[44px] w-[128px] rounded-[10px] text-white mt-[12px]">
+              Rental Car
+            </button>
+            <div className="w-full flex justify-center">
+              <img src={Car} className="mt-3" alt="" />
+            </div>
+            <img src={BG} className="absolute left-0 top-0 z-0" alt="" />
+          </div>
         </div>
-        <div className="w-full flex justify-center">
-          <img src={Car} className="mt-3" alt="" />
+        <div className="relative w-full h-auto p-4 bg-colorInformation rounded-[10px] mt-8 hidden lg:flex">
+          <div className="w-[243px]">
+            <p className="text-[16px] font-semibold text-white">
+              The Best Platform for Car Rental
+            </p>
+            <p className="text-[12px] text-white mt-[12px]">
+              Ease of doing a car rental safely and reliably. Of course at a low
+              price.
+            </p>
+            <button className="bg-primaryColor h-[44px] w-[128px] rounded-[10px] text-white mt-[12px]">
+              Rental Car
+            </button>
+            <div className="w-full flex justify-center">
+              <img src={Car} className="mt-3" alt="" />
+            </div>
+            <img src={BG} className="absolute left-0 top-0 z-0" alt="" />
+          </div>
         </div>
-        <img src={BG} className="absolute left-0 top-0 z-0" alt="" />
+        <div className="relative w-full h-auto p-4 bg-colorInformation rounded-[10px] mt-8 hidden lg:flex">
+          <div className="w-[243px]">
+            <p className="text-[16px] font-semibold text-white">
+              The Best Platform for Car Rental
+            </p>
+            <p className="text-[12px] text-white mt-[12px]">
+              Ease of doing a car rental safely and reliably. Of course at a low
+              price.
+            </p>
+            <button className="bg-primaryColor h-[44px] w-[128px] rounded-[10px] text-white mt-[12px]">
+              Rental Car
+            </button>
+            <div className="w-full flex justify-center">
+              <img src={Car} className="mt-3" alt="" />
+            </div>
+            <img src={BG} className="absolute left-0 top-0 z-0" alt="" />
+          </div>
+        </div>
       </div>
       <div>
         <div className="flex items-center justify-between mb-5 mt-8">
