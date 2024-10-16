@@ -5,7 +5,7 @@ import { IoPeople } from "react-icons/io5";
 import Btn from "../components/Button";
 const Cards = (props) => {
   return (
-    <div className="w-[240px] h-[286px] bg-white p-4 flex flex-col flex-shrink-0 justify-between rounded-[10px]">
+    <div className="w-[240px] lg:w-[255px] h-[286px] bg-white p-4 flex flex-col flex-shrink-0 justify-between rounded-[10px] ">
       <div>
         <div className="flex items-center justify-between">
           <p className="text-[16px] font-semibold">{props.name}</p>
@@ -15,7 +15,7 @@ const Cards = (props) => {
           <p className="text-[#90A3BF] text-[12px] font-medium">Sports</p>
         </div>
       </div>
-      <div>
+      <div className="flex items-center justify-center">
         <img src={props.image} alt="Car" />
       </div>
       <div className="flex items-center justify-between">

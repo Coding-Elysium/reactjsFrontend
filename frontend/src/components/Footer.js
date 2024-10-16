@@ -2,9 +2,9 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="h-[480px] bg-white mt-20 px-[64px] pt-[80px]">
-      <div className="flex items-start justify-between">
-        <div className="w-[292px] flex flex-col gap-4">
+    <footer className="h-[480px] lg:bg-white lg:mt-20 mt-4 px-6 lg:px-[64px] pt-[80px]">
+      <div className="items-start justify-between lg:flex">
+        <div className="w-[292px] flex flex-col gap-4 mb-10 lg:mb-0">
           <div>
             <p className="text-[24px] font-bold text-primaryColor">MORENT</p>
           </div>
@@ -15,8 +15,8 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div className="w-[550px] flex items-center justify-between pr-10">
-          <div className="flex flex-col gap-6">
+        <div className="w-auto lg:gap-5 lg:w-[550px] lg:flex items-start lg:items-center justify-between pr-10 flex flex-wrap">
+          <div className="flex flex-col gap-6 mb-10 lg:mb-0">
             <div>
               <p className="text-[20px] font-semibold">About</p>
             </div>
@@ -54,7 +54,7 @@ const Footer = () => {
       <div className="mt-[50px]">
         <hr className="bg-black" />
       </div>
-      <div className="flex items-center justify-between mt-9 font-semibold">
+      <div className="flex items-center justify-between mt-9 font-semibold flex-wrap">
         <div>
           <p>&copy;2022MORENT.All rights reserved</p>
         </div>
@@ -63,6 +63,7 @@ const Footer = () => {
           <p>Terms & Condition</p>
         </div>
       </div>
+      <div className="w-[24px] h-[24px] lg:hidden"></div>
     </footer>
   );
 };

@@ -110,7 +110,7 @@ const Hero = () => {
             <button className="bg-primaryColor h-[44px] w-[128px] rounded-[10px] text-white mt-[12px]">
               Rental Car
             </button>
-            <div className="w-full flex justify-center">
+            <div className="w-auto lg:w-full flex justify-center">
               <img src={Car} className="mt-3" alt="" />
             </div>
             <img src={BG} className="absolute left-0 top-0 z-0" alt="" />
@@ -124,7 +124,7 @@ const Hero = () => {
           </p>
           <p className="text-primaryColor text-[14px]">View All</p>
         </div>
-        <div className="relative flex overflow-x-scroll gap-5 no-scrollbar">
+        <div className="relative flex overflow-x-scroll gap-5 no-scrollbar lg:justify-between ">
           {showPopular}
         </div>
       </div>
@@ -133,7 +133,9 @@ const Hero = () => {
           <p className="text-[#90A3BF] font-semibold text-[14px] mb-5">
             Recommendation
           </p>
-          <div className="flex flex-col gap-6">{showRecommendation}</div>
+          <div className="flex flex-col gap-6 lg:flex-row lg:justify-between h-auto lg:flex-wrap">
+            {showRecommendation}
+          </div>
         </div>
       </div>
       <div className="flex items-center justify-center">

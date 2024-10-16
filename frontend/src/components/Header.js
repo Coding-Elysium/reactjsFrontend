@@ -5,7 +5,7 @@ import { CiSearch } from "react-icons/ci";
 import { BsFilter } from "react-icons/bs";
 const Header = () => {
   return (
-    <header className="px-6 py-4 bg-white lg:px-[62px]">
+    <header className="px-6 py-4 lg:bg-white lg:px-[62px]">
       <div className="flex items-center justify-between ">
         <div className="w-[702px] flex items-center justify-between">
           <div>
