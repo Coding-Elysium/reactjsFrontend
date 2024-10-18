@@ -4,14 +4,27 @@ const Button = (props) => {
   return (
     <div>
       <button
-        className={`bg-primaryColor rounded-[4px] text-white text-[12px] font-semibold`}
+        onClick={props.onClick}
+        className={`rounded-[4px] font-semibold w-full bg-primaryColor border-2 border-primaryColor text-white px-5 h-8`}
         style={{
           paddingLeft: `${props.padding}px`,
-          paddingRight: `${props.padding}px`, // Apply padding dynamically
-          height: `${props.height}px`, // Apply height dynamically
+          paddingRight: `${props.padding}px`,
+          height: `${props.height}px`,
+          width: `${props.width}`,
+          backgroundColor: props.backgroundColor,
+          borderColor: props.borderColor,
         }}
       >
-        {props.text}
+        <p
+          className="text-lg font-bold text-white"
+          style={{
+            color: props.textColor,
+            fontSize: `${props.textSize}px`,
+            fontWeight: props.textWeight,
+          }}
+        >
+          {props.text}
+        </p>
       </button>
     </div>
   );

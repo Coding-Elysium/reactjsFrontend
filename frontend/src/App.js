@@ -1,12 +1,8 @@
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
+import Login from "./pages/Login";
 function App() {
   return (
     <div>
-      <Header />
-      <Hero />
-      <Footer />
+      <Login />
     </div>
   );
 }
